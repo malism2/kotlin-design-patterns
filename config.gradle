@@ -1,0 +1,31 @@
+ext {
+    android = [
+            compileSdkVersion: 30,
+            minSdkVersion    : 21,
+            targetSdkVersion : 30,
+            buildTool        : '30.0.2',
+    ]
+
+    libs = [
+            core_ktx :'1.3.2', // androidx.core-ktx
+            appcompat : '1.2.0', // androidx.appcompat
+            material : '1.2.1', // google.material
+            constraintlayout : '2.0.4', // androidx.constraintlayout
+            navigation : '2.3.1', // androidx.navigation
+            lifecycle : '2.2.0', // androidx.lifecycle
+            room : '2.2.5', // androidx.room
+
+            arouter : '1.5.1',
+            autosize : '1.2.1', // AndroidAutoSize
+            rxpermissions : '0.12', // rxpermissions
+            BaseRecyclerView : '3.0.4',
+            BannerView : '3.2.0',
+
+            glide : '4.11.0',
+            lottie : '3.5.0',
+            retrofit : '2.9.0',
+
+            bugly : '1.4.5',
+            leakcanary : '2.3'
+    ]
+}
