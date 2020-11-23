@@ -2,8 +2,6 @@ package com.malism.pattern.strategy
 
 import org.junit.Test
 
-import org.junit.Assert.*
-
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -11,7 +9,20 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun simulator_duck() {
+        var duck: Duck = MallardDuck().apply {
+            setFlyBehavior(FlyWings())
+            setQuackBehavior(Squeak())
+        }
+        action(duck)
+
+        duck = ModelDuck(FlyNone(), Mute())
+        action(duck)
+    }
+
+    private fun action(duck: Duck) {
+        duck.display()
+        duck.performFly()
+        duck.performQuack()
     }
 }
